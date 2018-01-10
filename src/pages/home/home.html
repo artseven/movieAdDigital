@@ -1,15 +1,11 @@
-<ion-header>
-    <ion-navbar>
-        <ion-title>
-            Ionic Blank
-        </ion-title>
-    </ion-navbar>
-</ion-header>
+
 
 <ion-content padding>
-    <button  *ngIf="!disabled" ion-button (click)="getToken()">Get Token</button>
-    <p>{{ token }}</p>
-    <button ion-button (click)="postToken()">Post Token</button>
-    <p *ngIf="message">{{ message }} with code: <b>{{ code }}</b></p>
-    <button ion-button [navPush]="SlidesPage">Next</button>
+        <button *ngIf="!disabled" ion-button (click)="getToken()">Get Token</button>
+        <p>{{ token }}</p>
+        <button ion-button (click)="postToken()">Post Token</button>
+        <p *ngIf="message">{{ message }} with code: <b>{{ code }} </b>and click Next</p>
+        <button ion-button [navPush]="SlidesPage">Next</button>
+
+
 </ion-content>

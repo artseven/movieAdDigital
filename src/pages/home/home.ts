@@ -41,13 +41,14 @@ export class HomePage {
     this.storage.get('token').then((val) => {
       this.token = val;
       console.log('This is my token', this.token);
+      this.http.get('http://beta.movieaddigital.com/api2/?token=' + this.token)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.message = data.MESSAGE;
+          console.log(this.message);
+        })
     })
-    this.http.get('http://beta.movieaddigital.com/api2/?token=' + this.token)
-    .map(res => res.json())
-    .subscribe(data => {
-      this.message = data.MESSAGE;
-      console.log(this.message);
-    })
+    
   }
 
 
