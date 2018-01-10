@@ -1,11 +1,35 @@
 
 
 <ion-content padding>
-        <button *ngIf="!disabled" ion-button (click)="getToken()">Get Token</button>
-        <p>{{ token }}</p>
-        <button ion-button (click)="postToken()">Post Token</button>
-        <p *ngIf="message">{{ message }} with code: <b>{{ code }} </b>and click Next</p>
-        <button ion-button [navPush]="SlidesPage">Next</button>
+    <ion-card padding>
+      <ion-card-header>
+        <b>Register your device</b>
+      </ion-card-header>
+      <ion-card-content>
+        <ol>
+          <!-- <li>
+              Click to get token for this device.
+              <button *ngIf="!disabled" ion-button (click)="getToken()">Get Token</button>
+          </li>
+          <li>
+            Post token to system
+             <button ion-button (click)="postToken()">Post Token</button>
+            <p>{{ token }}</p> -->
+          <!-- </li> -->
+          <li>
+            <p *ngIf="message">{{ message }} with code: <b>{{ code }} </b>and click Next</p>
+          </li>
+          <li>
+            Once claimed, click next
+              <button ion-button [navPush]="SlidesPage">Next</button>
+
+          </li>
+
+        </ol>
+      </ion-card-content>
+
+    </ion-card>
+
 
 
 </ion-content>

@@ -23,15 +23,20 @@ export class HomePage {
    this.SlidesPage = SlidesPage;
   }
 
+  ionViewWillEnter() {
+    this.getToken();
+    this.postToken();
+  }
   getToken() {
-    let headers = new Headers();
-    headers.append('Access-Control-Allow-Origin', '*');
-    this.http.get('http://beta.movieaddigital.com/api2/', {headers: headers})
+    // let headers = new Headers();
+    // headers.append('Access-Control-Allow-Origin', '*');
+    this.http.get('http://beta.movieaddigital.com/api2/')
     .map(res => res.json())
     .subscribe(data => {
       console.log(data);
       this.storage.set('token', data.TOKEN);
       this.code = data.CODE;
+      this.token = data.TOKEN;
     });
     this.disabled = true;
   }
@@ -45,10 +50,11 @@ export class HomePage {
         .map(res => res.json())
         .subscribe(data => {
           this.message = data.MESSAGE;
+          this.code = data.CODE;
           console.log(this.message);
         })
     })
-    
+
   }
 
 

@@ -23,12 +23,16 @@ export class SlidesPage {
     public storage: Storage,
     public http: Http
   ) {
+
     this.storage.get('token').then((val) => {
       this.token = val;
       console.log('This is my token', this.token);
 
     })
     setInterval(()=> {
+     let headers = new Headers();
+     headers.append('Access-Control-Allow-Origin', '*');
+
      this.http.get('http://beta.movieaddigital.com/api2/?token=' + this.token)
       .map(res=> res.json())
       .subscribe((data)=> {
@@ -41,20 +45,8 @@ export class SlidesPage {
     //     }
     // }, 5000);
       });
-    }, 10000);
-}
-  // postToken() {
-  //   let headers = new Headers();
+    }, 5000);
+  }
 
-  //   this.http.get('http://beta.movieaddigital.com/api2/?token=' + this.token)
-  //     .map(res => res.json())
-  //     .subscribe(data => {
-  //       this.message = data.MESSAGE;
-  //       console.log(this.message);
-  //     })
-  // }
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad SlidesPage');
-  // }
 
 }
