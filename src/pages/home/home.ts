@@ -25,11 +25,14 @@ export class HomePage {
 
   ionViewWillEnter() {
     this.getToken();
-    this.postToken();
   }
+
   getToken() {
-    // let headers = new Headers();
-    // headers.append('Access-Control-Allow-Origin', '*');
+    this.storage.get('token').then((val) => {
+      if (val !== null) {
+        this.token = val;
+        this.navCtrl.push(SlidesPage);
+      } else {
     this.http.get('http://beta.movieaddigital.com/api2/')
     .map(res => res.json())
     .subscribe(data => {
@@ -39,6 +42,9 @@ export class HomePage {
       this.token = data.TOKEN;
     });
     this.disabled = true;
+    this.postToken();
+      }
+    })
   }
 
   postToken() {
