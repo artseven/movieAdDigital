@@ -1,6 +1,6 @@
 {
   "name": "movieAdDigital",
-  "app_id": "",
+  "app_id": "amzn1.devportal.mobileapp.4092f0ae2fa249ccaf481d6ea5c0da1e",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
