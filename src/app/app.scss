@@ -1,7 +1,9 @@
 // http://ionicframework.com/docs/theming/
 ion-content {
     background-image: url(/assets/imgs/logoResized.png);
-    width: 100%;
+    background-size: cover;
+    // width: 100%;
+
 }
 
 // App Global Sass

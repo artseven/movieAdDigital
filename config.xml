@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.solosnet.movieaddigital" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>movieAdDigital</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <description>Movie Ad Digital</description>
+    <author email="yabkevich.artsiom.09@gmail.com">Art</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -78,9 +78,19 @@
     </platform>
     <engine name="android" spec="6.3.0" />
     <plugin name="cordova-sqlite-storage" spec="^2.2.0" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1f52fe815631d83366cdfe7f9af93ddd2b0fe25c
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
+<<<<<<< HEAD
+=======
+=======
+    <engine name="android" spec="~6.3.0" />
+>>>>>>> 1dad4b6446a573e87b68159fb61352433cb06f8d
+>>>>>>> 1f52fe815631d83366cdfe7f9af93ddd2b0fe25c
 </widget>
