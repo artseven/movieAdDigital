@@ -15,6 +15,7 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     SlidesPage
+    
   ],
   imports: [
     BrowserModule,

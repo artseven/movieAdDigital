@@ -5,7 +5,6 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 
-@IonicPage()
 @Component({
   selector: 'page-slides',
   templateUrl: 'slides.html',
